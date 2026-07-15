@@ -330,7 +330,7 @@ input[type=range] { width: 100%; accent-color: #4f9cf9; height: 28px; }
 
 <div class="update-strip">
   <span class="us-dot"></span>
-  <span class="us-text">v2.1 · 2026-07-11 — 실전 사례 8건 추가 · 오버슈팅 8가지 이유</span>
+  <span class="us-text">v2.2 · 2026-07-15 — 권리분석 심화(말소기준·대항력·당해세) · 리치투유 낙찰가표</span>
 </div>
 
 <div id="msc">
@@ -2502,6 +2502,133 @@ input[type=range] {
 </div>
   </div>
 </div>
+<div class="sp-wrap">
+  <div class="sp-intro">
+    <strong>🧭 권리분석 기본기</strong> — 특수물건 이전에, 모든 경매의 뼈대인 <strong>말소기준권리 → 대항력 → 당해세</strong> 순서를 잡습니다.
+  </div>
+
+  <div class="sp-card">
+    <div class="sp-card-head">
+      <span class="sp-num">A</span>
+      <span class="sp-card-title">말소기준권리 — 인수·소멸의 기준선</span>
+    </div>
+    <div class="sp-def">
+      등기부에서 <strong>근저당·저당·압류·가압류·가등기·경매개시결정</strong> 중 <strong>가장 빠른(위에 있는) 권리</strong>가 말소기준권리입니다. 여기에 선을 긋고 판단합니다.
+    </div>
+    <div class="sp-rule">
+      <div class="sp-rule-title">인수 · 소멸 판별</div>
+      <div class="sp-rule-row keep">
+        <span class="sp-tag keep">인수</span>
+        <span>말소기준권리 <strong>위</strong>(더 빠른) 권리 → 낙찰자 인수 → <strong>위험</strong></span>
+      </div>
+      <div class="sp-rule-row gone">
+        <span class="sp-tag gone">소멸</span>
+        <span>말소기준권리 <strong>아래</strong>(더 느린) 권리 → 배당 후 소멸 → 안전</span>
+      </div>
+    </div>
+    <div class="sp-check">
+      <strong>✔ 실무 체크</strong>
+      소유권 아래에서 위 6가지 중 가장 빠른 것을 찾아 선을 긋고, 그 위에 인수될 권리가 있는지만 보면 됩니다.
+    </div>
+  </div>
+
+  <div class="sp-card">
+    <div class="sp-card-head">
+      <span class="sp-num">B</span>
+      <span class="sp-card-title">대항력 임차인 — 전입일 vs 말소기준일</span>
+    </div>
+    <div class="sp-def">
+      임차인의 <strong>전입일이 말소기준권리보다 빠르면 대항력 O</strong>(느리면 X). 대항력이 있는데 보증금 전액을 배당받지 못하면 <strong>그 차액을 낙찰자가 인수</strong>합니다.
+    </div>
+    <div class="sp-rule">
+      <div class="sp-rule-title">임차인보다 먼저 배당받는 것 (주의)</div>
+      <div class="sp-rule-row keep">
+        <span class="sp-tag keep">우선</span>
+        <span>당해세·조세채권(법정기일 빠른 것), 근로복지공단 압류 등은 임차인보다 앞설 수 있음</span>
+      </div>
+    </div>
+    <div class="sp-check">
+      <strong>✔ 실무 체크</strong>
+      대항력 임차인이 있으면 "전액 배당받을 수 있는가"를 확인하세요. 배당순위로 밀리면 미배당분이 인수됩니다.
+    </div>
+    <div class="img-section" style="margin-top:10px">
+      <div class="img-section-label" style="color:#5dcaa5">실제 등기부 예시</div>
+      <div class="img-grid m-ig">
+        <div class="tc" onclick="openLB('IMG_8718_png')"><img src="img/IMG_8718_thumb.jpg" loading="lazy"><span>말소기준권리 찾기</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sp-card">
+    <div class="sp-card-head">
+      <span class="sp-num">C</span>
+      <span class="sp-card-title">당해세 — 2023.4.1 개정 (중요)</span>
+    </div>
+    <div class="sp-def">
+      당해세(그 부동산에 부과된 세금)는 예전엔 <strong>날짜와 무관하게 모든 배당보다 우선</strong>이라 대항력 임차인 물건이 매우 위험했습니다.
+    </div>
+    <div class="sp-rule">
+      <div class="sp-rule-title">개정 내용 (2022년 전세사기 대응)</div>
+      <div class="sp-rule-row gone">
+        <span class="sp-tag gone">변경</span>
+        <span>2023.4.1부터 <strong>임차인 확정일자보다 늦은 당해세</strong>는 임차인보다 우선배당 못 함</span>
+      </div>
+    </div>
+    <div class="sp-check">
+      <strong>✔ 세금 크기 감</strong>
+      국세(상속·증여·종부세)는 크고, 지방세(재산세 등)는 작습니다. 세무서(국세)가 압류권자면 큰 세금, 구청(지방세)이면 작은 세금으로 짐작합니다.
+    </div>
+  </div>
+
+  <div class="sp-card">
+    <div class="sp-card-head">
+      <span class="sp-num">D</span>
+      <span class="sp-card-title">대항력 물건 푸는 3가지 방법</span>
+    </div>
+    <div class="sp-def">
+      당해세 금액을 정확히 알 수 없는 대항력 임차인 물건을, 아래 3가지로 안전하게 접근합니다.
+    </div>
+    <ul class="body-list" style="margin-top:6px">
+      <li><strong>① 시세-보증금 갭 추정</strong> — 시세 2.5억·선순위 보증금 1.9억이면 갭 6천만원. 세금이 그 안이면 안전</li>
+      <li><strong>② 확정일자 늦은 당해세</strong> — 2023.4.1 개정으로 임차인보다 늦은 당해세는 선배당 아님</li>
+      <li><strong>③ 무잉여 기각 원칙</strong> — 신청 채권자가 배당 못 받을 물건은 경매가 자동 취소됨 → 진행 중인 물건은 그만큼 안전 신호. <strong>경매 신청자가 누구인지</strong> 확인</li>
+    </ul>
+    <div class="sp-warn">
+      ⚠️ 임차인이 직접 신청한 경매인지, 근저당권자가 신청한 경매인지 확인하세요. 임의경매·강제경매 구분도 함께 봅니다.
+    </div>
+    <div class="img-section" style="margin-top:10px">
+      <div class="img-section-label" style="color:#5dcaa5">실제 등기부 예시</div>
+      <div class="img-grid m-ig">
+        <div class="tc" onclick="openLB('IMG_8725_png')"><img src="img/IMG_8725_thumb.jpg" loading="lazy"><span>경매 신청자 확인 · 무잉여</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sp-card">
+    <div class="sp-card-head">
+      <span class="sp-num">E</span>
+      <span class="sp-card-title">배당순위 (요약)</span>
+    </div>
+    <div class="tbl-wrap" style="margin-top:6px">
+      <table>
+        <thead><tr><th>순위</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>경매비용</td></tr>
+          <tr><td>2</td><td>최우선변제(소액임차인) · 최종 임금채권(근로복지공단)</td></tr>
+          <tr><td>3</td><td>당해세(국세 중 상속·증여·재평가세 / 지방세 중 재산세·자동차세·종합부동산세 등)</td></tr>
+          <tr><td>4</td><td>우선변제 — 전세권·저당권·담보등기 담보물권, 대항력+확정일자 임차인, 당해세 이외 조세(법정기일 순)</td></tr>
+          <tr><td>5</td><td>일반임금채권</td></tr>
+          <tr><td>6</td><td>담보물권보다 늦은 조세채권</td></tr>
+          <tr><td>7</td><td>의료보험료·산업재해보상보험료·국민연금보험료</td></tr>
+          <tr><td>8</td><td>일반채권</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sp-check">
+      <strong>✔ 출처</strong> 배당순위는 법 기준 요약이며, 개별 물건은 매각물건명세서와 전문가 확인이 필요합니다.
+    </div>
+  </div>
+</div>
 </div>
 </div>
 <div class="ms" id="m-s5" data-color="#b47cf8" style="display:none">
@@ -2534,6 +2661,44 @@ input[type=range] {
   <div class="qa-warn" style="margin-top:8px">튀는 물건(입찰자 몰릴 물건)은 피하는 게 좋습니다. <strong>패찰은 실패가 아닙니다.</strong></div>
 </div>
 
+<div class="body-section">
+  <span class="tag core">📐 금액대별 적정 낙찰가 가이드 (리치투유)</span>
+  <div class="qa-tip" style="margin-top:8px">시세 대비 <strong>목표 안전마진(기대 차익)</strong>과 추천 낙찰가입니다. "시세보다 얼마나 싸게 사느냐"의 기준선으로 쓰세요.</div>
+  <div class="tbl-wrap" style="margin-top:10px">
+    <table>
+      <thead><tr><th>정상 시세</th><th>목표 안전마진</th><th>추천 낙찰가</th><th>투자자 유형</th></tr></thead>
+      <tbody>
+        <tr><td>2억 이하</td><td>3,000만원</td><td>1억 7,000선</td><td>소액·단타</td></tr>
+        <tr><td>4억 이하</td><td>5,000만원</td><td>3억 5,000선</td><td>실거주·매매사업</td></tr>
+        <tr><td>6억 이하</td><td>8,000만원</td><td>5억 2,000선</td><td>수도권 핵심 주거</td></tr>
+        <tr><td>8억 이하</td><td>9,000만원</td><td>7억 1,000선</td><td>상급지 갈아타기</td></tr>
+        <tr><td>10억 이하</td><td>1억</td><td>9억선</td><td>거대 마진 확보</td></tr>
+        <tr><td>12억 이하</td><td>1억 5,000</td><td>10억 5,000선</td><td>고가자산 체인</td></tr>
+        <tr><td>15억 이하</td><td>2억</td><td>13억선</td><td>자본가용 치트키</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="qa-tip" style="margin-top:8px">💡 대략 <strong>시세의 약 90%(-10%)</strong> 선입니다. 10억이면 9억, 3억이면 2.6~2.7억으로 접근. <span style="color:var(--muted)">출처: 리치투유 제작</span></div>
+</div>
+
+<div class="body-section">
+  <span class="tag core">🎯 적정 낙찰가 산정 원칙</span>
+  <ul class="body-list" style="margin-top:8px">
+    <li><strong>목표는 차순위 근접</strong> — 1등이 아니라 1등과 2등 <strong>사이</strong>에 들어가는 걸 트레이닝</li>
+    <li><strong>최소 안전마진 3,000만원↑ · 순수익 2,000만원↑</strong>를 목표로 (5,000 이하 소액 제외)</li>
+    <li><strong>급매가·실거래가</strong>를 정확히 뽑고, "오늘 현금으로 사면 얼마까지 깎이나"를 기준으로</li>
+    <li><strong>인테리어 기준</strong> — 25평 1,500만원 / 33평 2,500만원. 인테리어 후 신고가로 매도 가능가 산정</li>
+    <li><strong>현금 40% 보유</strong> — 대출은 60~70%, 나머지는 현금 확보</li>
+  </ul>
+  <div class="qa-tip" style="margin-top:8px">💡 대부분 <strong>1억 이상은 갭을 둔다</strong> — 고가 물건일수록 차익 노린 입찰자가 많아 그만큼 갭이 큽니다.</div>
+</div>
+
+<div class="body-section">
+  <span class="tag warn">🚫 초보가 빠지는 "있지도 않은 비용" 함정</span>
+  <div class="qa-warn" style="margin-top:8px">경매 수익률 계산기는 <strong>낙찰 후 정산용</strong>이지 <strong>입찰가 산정용이 아닙니다.</strong> 있지도 않은 비용을 다 빼면 입찰가가 한없이 낮아져 <strong>패찰만 반복</strong>하다 경매를 오래 못 합니다.</div>
+  <div class="qa-tip" style="margin-top:8px">중도상환수수료·미납관리비·중개수수료·수리비·법무비·청소비·강제집행비·이사비·도배비·장판비·관리비… 이런 걸 다 빼면 끝이 없습니다.</div>
+  <div class="qa-tip" style="margin-top:8px">💡 대신 <strong>"4,000만원 정도 싸게 받으면 포·차 떼고도 최소 2,000만원 남는다"</strong>처럼 러프하게 계산하세요. 세부 비용은 그 마진 안에 다 포함됩니다.</div>
+</div>
 <div class="body-section">
   <span class="tag core">📊 실전 사례로 보는 낙찰가율</span>
   <div class="tbl-wrap" style="margin-top:8px">
@@ -3495,7 +3660,7 @@ window.addEventListener('load', function() {
 })();
 </script>
 <script>
-const D={"IMG_8683_png": {src:"img/IMG_8683.jpg",cap:"사례 ① 시흥 군자동 33평 · 신건 — 물건 소개",tall:1},"IMG_8684_png": {src:"img/IMG_8684.jpg",cap:"사례 ① 시흥 군자동 33평 · 신건 — 실 6.9억 → 낙찰 6.77억(106%) · 2명",tall:1},"IMG_8685_png": {src:"img/IMG_8685.jpg",cap:"사례 ② 김포 운양동 33평 · 1층 — 물건 소개",tall:1},"IMG_8686_png": {src:"img/IMG_8686.jpg",cap:"사례 ② 김포 운양동 33평 · 1층 — 실 4.4억 → 낙찰 4.23억(81%) · 2명",tall:1},"IMG_8687_png": {src:"img/IMG_8687.jpg",cap:"사례 ③ 시흥 배곧동 33평 — 물건 소개",tall:1},"IMG_8688_png": {src:"img/IMG_8688.jpg",cap:"사례 ③ 시흥 배곧동 33평 — 실 5.3억 → 낙찰 4.87억(89%) · 4명",tall:1},"IMG_8689_png": {src:"img/IMG_8689.jpg",cap:"사례 ④ 김포 장기동 34평 — 물건 소개",tall:1},"IMG_8690_png": {src:"img/IMG_8690.jpg",cap:"사례 ④ 김포 장기동 34평 — 실 4.8억 → 낙찰 4.50억(85%) · 7명",tall:1},"IMG_8691_png": {src:"img/IMG_8691.jpg",cap:"사례 ⑤ 김포 구래동 33평 — 물건 소개",tall:1},"IMG_8692_png": {src:"img/IMG_8692.jpg",cap:"사례 ⑤ 김포 구래동 33평 — 실 3.9억 → 낙찰 3.45억(82%) · 14명",tall:1},"IMG_8693_png": {src:"img/IMG_8693.jpg",cap:"사례 ⑥ 김포 운양동 33평 · 21층 — 물건 소개",tall:1},"IMG_8694_png": {src:"img/IMG_8694.jpg",cap:"사례 ⑥ 김포 운양동 33평 · 21층 — 실 4.2억 → 낙찰 3.83억(83%) · 5명",tall:1},"IMG_8695_png": {src:"img/IMG_8695.jpg",cap:"사례 ⑦ 부천 원미구 56평 — 물건 소개",tall:1},"IMG_8696_png": {src:"img/IMG_8696.jpg",cap:"사례 ⑦ 부천 원미구 56평 — 실 8.5억 → 낙찰 7.59억(84%) · 7명",tall:1},"IMG_8697_png": {src:"img/IMG_8697.jpg",cap:"사례 ⑧ 안산 초지역 25평 · 신축 — 물건 소개",tall:1},"IMG_8698_png": {src:"img/IMG_8698.jpg",cap:"사례 ⑧ 안산 초지역 25평 · 신축 — 실 6.1억 → 낙찰 5.54억(89%) · 10명",tall:1},"INFO_overbid8_png": {src:"img/INFO_overbid8.jpg",cap:"시세보다 비싸게 낙찰받는 8가지 이유"},"IMG_8633_png": {src:"img/IMG_8633.jpg",cap:"고지마제이 실전 사례 ①",tall:1},"IMG_8634_png": {src:"img/IMG_8634.jpg",cap:"고지마제이 실전 사례 ②",tall:1},"IMG_8635_png": {src:"img/IMG_8635.jpg",cap:"고지마제이 실전 사례 ③",tall:1},"IMG_8636_png": {src:"img/IMG_8636.jpg",cap:"고지마제이 실전 사례 ④",tall:1},"IMG_8637_png": {src:"img/IMG_8637.jpg",cap:"고지마제이 실전 사례 ⑤",tall:1},"IMG_8638_png": {src:"img/IMG_8638.jpg",cap:"고지마제이 실전 사례 ⑥",tall:1},"IMG_8639_png": {src:"img/IMG_8639.jpg",cap:"고지마제이 실전 사례 ⑦",tall:1},"IMG_8365_png": {src:"img/IMG_8365.jpg",cap:"왜 투자 방법이 바뀌었을까?"},  "IMG_8366_png": {src:"img/IMG_8366.jpg",cap:"서울·경기 규제지역 지도"},  "IMG_8363_png": {src:"img/IMG_8363.jpg",cap:"당신은 어디에 해당하나요?"},  "IMG_8377_png": {src:"img/IMG_8377.jpg",cap:"10초 투자자 유형 확인"},  "IMG_8378_png": {src:"img/IMG_8378.jpg",cap:"유형별 최적 전략 비교"},  "IMG_8379_png": {src:"img/IMG_8379.jpg",cap:"입찰 전 5가지 체크"},  "IMG_8367_png": {src:"img/IMG_8367.jpg",cap:"대출은 얼마나 나오나요?"},  "IMG_8368_png": {src:"img/IMG_8368.jpg",cap:"무주택이라고 모두 같은 대출이 아님"},  "IMG_8369_png": {src:"img/IMG_8369.jpg",cap:"왜 생애최초를 추천할까?"},  "IMG_8370_png": {src:"img/IMG_8370.jpg",cap:"일반무주택 — 비규제 경매 전략"},  "IMG_8374_png": {src:"img/IMG_8374.jpg",cap:"왜 매매사업자를 사용할까?"},  "IMG_8375_png": {src:"img/IMG_8375.jpg",cap:"대출규제 시대 매매사업자 유리한 이유"},  "IMG_8315_jpeg": {src:"img/IMG_8315.jpg",cap:"리치투유 — 최소 자금 전략"},  "IMG_8408_png": {src:"img/IMG_8408.jpg",cap:"권리분석 핵심정리 표지"},  "IMG_8409_png": {src:"img/IMG_8409.jpg",cap:"말소기준권리란?"},  "IMG_8410_png": {src:"img/IMG_8410.jpg",cap:"말소기준권리 종류"},  "IMG_8411_png": {src:"img/IMG_8411.jpg",cap:"대항력 확인"},  "IMG_8412_png": {src:"img/IMG_8412.jpg",cap:"전입·점유·확정일자 확인"},  "IMG_8413_png": {src:"img/IMG_8413.jpg",cap:"선순위 임차인 판단법"},  "IMG_8414_png": {src:"img/IMG_8414.jpg",cap:"우선변제권이란?"},  "IMG_8415_png": {src:"img/IMG_8415.jpg",cap:"보증금 인수 위험 물건 4가지"},  "IMG_8416_png": {src:"img/IMG_8416.jpg",cap:"안전한 물건 4가지 체크"},  "IMG_8417_png": {src:"img/IMG_8417.jpg",cap:"권리분석 4단계 프로세스"},  "IMG_8382_jpeg": {src:"img/IMG_8382.jpg",cap:"배당요구 판단 도표 (손글씨)"},  "IMG_8361_png": {src:"img/IMG_8361.jpg",cap:"경매 투자 전략 TOP3"},  "IMG_8364_png": {src:"img/IMG_8364.jpg",cap:"경매 투자 TOP3 상세"},  "IMG_8372_png": {src:"img/IMG_8372.jpg",cap:"실거주 비과세 투자"},  "IMG_8371_png": {src:"img/IMG_8371.jpg",cap:"1주택자 갈아타기 전략"},  "IMG_8373_png": {src:"img/IMG_8373.jpg",cap:"1주택자 투자 지역 선택"},  "IMG_8383_png": {src:"img/IMG_8383.png",cap:"경매 진행 타임스케줄"},  "IMG_8341_png": {src:"img/IMG_8341.jpg",cap:"점유자 심경 변화 16단계"},  "IMG_8342_png": {src:"img/IMG_8342.jpg",cap:"점유자 심경 변화 (만화형)"},  "IMG_8352_png": {src:"img/IMG_8352.png",cap:"경매 임장, 꼭 가야 할까?"},
+const D={"IMG_8718_png": {src:"img/IMG_8718.jpg",cap:"말소기준권리 예시 — 등기부 가장 빠른 권리",tall:1},"IMG_8725_png": {src:"img/IMG_8725.jpg",cap:"경매 신청자 확인 예시 — 무잉여 기각",tall:1},"IMG_8683_png": {src:"img/IMG_8683.jpg",cap:"사례 ① 시흥 군자동 33평 · 신건 — 물건 소개",tall:1},"IMG_8684_png": {src:"img/IMG_8684.jpg",cap:"사례 ① 시흥 군자동 33평 · 신건 — 실 6.9억 → 낙찰 6.77억(106%) · 2명",tall:1},"IMG_8685_png": {src:"img/IMG_8685.jpg",cap:"사례 ② 김포 운양동 33평 · 1층 — 물건 소개",tall:1},"IMG_8686_png": {src:"img/IMG_8686.jpg",cap:"사례 ② 김포 운양동 33평 · 1층 — 실 4.4억 → 낙찰 4.23억(81%) · 2명",tall:1},"IMG_8687_png": {src:"img/IMG_8687.jpg",cap:"사례 ③ 시흥 배곧동 33평 — 물건 소개",tall:1},"IMG_8688_png": {src:"img/IMG_8688.jpg",cap:"사례 ③ 시흥 배곧동 33평 — 실 5.3억 → 낙찰 4.87억(89%) · 4명",tall:1},"IMG_8689_png": {src:"img/IMG_8689.jpg",cap:"사례 ④ 김포 장기동 34평 — 물건 소개",tall:1},"IMG_8690_png": {src:"img/IMG_8690.jpg",cap:"사례 ④ 김포 장기동 34평 — 실 4.8억 → 낙찰 4.50억(85%) · 7명",tall:1},"IMG_8691_png": {src:"img/IMG_8691.jpg",cap:"사례 ⑤ 김포 구래동 33평 — 물건 소개",tall:1},"IMG_8692_png": {src:"img/IMG_8692.jpg",cap:"사례 ⑤ 김포 구래동 33평 — 실 3.9억 → 낙찰 3.45억(82%) · 14명",tall:1},"IMG_8693_png": {src:"img/IMG_8693.jpg",cap:"사례 ⑥ 김포 운양동 33평 · 21층 — 물건 소개",tall:1},"IMG_8694_png": {src:"img/IMG_8694.jpg",cap:"사례 ⑥ 김포 운양동 33평 · 21층 — 실 4.2억 → 낙찰 3.83억(83%) · 5명",tall:1},"IMG_8695_png": {src:"img/IMG_8695.jpg",cap:"사례 ⑦ 부천 원미구 56평 — 물건 소개",tall:1},"IMG_8696_png": {src:"img/IMG_8696.jpg",cap:"사례 ⑦ 부천 원미구 56평 — 실 8.5억 → 낙찰 7.59억(84%) · 7명",tall:1},"IMG_8697_png": {src:"img/IMG_8697.jpg",cap:"사례 ⑧ 안산 초지역 25평 · 신축 — 물건 소개",tall:1},"IMG_8698_png": {src:"img/IMG_8698.jpg",cap:"사례 ⑧ 안산 초지역 25평 · 신축 — 실 6.1억 → 낙찰 5.54억(89%) · 10명",tall:1},"INFO_overbid8_png": {src:"img/INFO_overbid8.jpg",cap:"시세보다 비싸게 낙찰받는 8가지 이유"},"IMG_8633_png": {src:"img/IMG_8633.jpg",cap:"고지마제이 실전 사례 ①",tall:1},"IMG_8634_png": {src:"img/IMG_8634.jpg",cap:"고지마제이 실전 사례 ②",tall:1},"IMG_8635_png": {src:"img/IMG_8635.jpg",cap:"고지마제이 실전 사례 ③",tall:1},"IMG_8636_png": {src:"img/IMG_8636.jpg",cap:"고지마제이 실전 사례 ④",tall:1},"IMG_8637_png": {src:"img/IMG_8637.jpg",cap:"고지마제이 실전 사례 ⑤",tall:1},"IMG_8638_png": {src:"img/IMG_8638.jpg",cap:"고지마제이 실전 사례 ⑥",tall:1},"IMG_8639_png": {src:"img/IMG_8639.jpg",cap:"고지마제이 실전 사례 ⑦",tall:1},"IMG_8365_png": {src:"img/IMG_8365.jpg",cap:"왜 투자 방법이 바뀌었을까?"},  "IMG_8366_png": {src:"img/IMG_8366.jpg",cap:"서울·경기 규제지역 지도"},  "IMG_8363_png": {src:"img/IMG_8363.jpg",cap:"당신은 어디에 해당하나요?"},  "IMG_8377_png": {src:"img/IMG_8377.jpg",cap:"10초 투자자 유형 확인"},  "IMG_8378_png": {src:"img/IMG_8378.jpg",cap:"유형별 최적 전략 비교"},  "IMG_8379_png": {src:"img/IMG_8379.jpg",cap:"입찰 전 5가지 체크"},  "IMG_8367_png": {src:"img/IMG_8367.jpg",cap:"대출은 얼마나 나오나요?"},  "IMG_8368_png": {src:"img/IMG_8368.jpg",cap:"무주택이라고 모두 같은 대출이 아님"},  "IMG_8369_png": {src:"img/IMG_8369.jpg",cap:"왜 생애최초를 추천할까?"},  "IMG_8370_png": {src:"img/IMG_8370.jpg",cap:"일반무주택 — 비규제 경매 전략"},  "IMG_8374_png": {src:"img/IMG_8374.jpg",cap:"왜 매매사업자를 사용할까?"},  "IMG_8375_png": {src:"img/IMG_8375.jpg",cap:"대출규제 시대 매매사업자 유리한 이유"},  "IMG_8315_jpeg": {src:"img/IMG_8315.jpg",cap:"리치투유 — 최소 자금 전략"},  "IMG_8408_png": {src:"img/IMG_8408.jpg",cap:"권리분석 핵심정리 표지"},  "IMG_8409_png": {src:"img/IMG_8409.jpg",cap:"말소기준권리란?"},  "IMG_8410_png": {src:"img/IMG_8410.jpg",cap:"말소기준권리 종류"},  "IMG_8411_png": {src:"img/IMG_8411.jpg",cap:"대항력 확인"},  "IMG_8412_png": {src:"img/IMG_8412.jpg",cap:"전입·점유·확정일자 확인"},  "IMG_8413_png": {src:"img/IMG_8413.jpg",cap:"선순위 임차인 판단법"},  "IMG_8414_png": {src:"img/IMG_8414.jpg",cap:"우선변제권이란?"},  "IMG_8415_png": {src:"img/IMG_8415.jpg",cap:"보증금 인수 위험 물건 4가지"},  "IMG_8416_png": {src:"img/IMG_8416.jpg",cap:"안전한 물건 4가지 체크"},  "IMG_8417_png": {src:"img/IMG_8417.jpg",cap:"권리분석 4단계 프로세스"},  "IMG_8382_jpeg": {src:"img/IMG_8382.jpg",cap:"배당요구 판단 도표 (손글씨)"},  "IMG_8361_png": {src:"img/IMG_8361.jpg",cap:"경매 투자 전략 TOP3"},  "IMG_8364_png": {src:"img/IMG_8364.jpg",cap:"경매 투자 TOP3 상세"},  "IMG_8372_png": {src:"img/IMG_8372.jpg",cap:"실거주 비과세 투자"},  "IMG_8371_png": {src:"img/IMG_8371.jpg",cap:"1주택자 갈아타기 전략"},  "IMG_8373_png": {src:"img/IMG_8373.jpg",cap:"1주택자 투자 지역 선택"},  "IMG_8383_png": {src:"img/IMG_8383.png",cap:"경매 진행 타임스케줄"},  "IMG_8341_png": {src:"img/IMG_8341.jpg",cap:"점유자 심경 변화 16단계"},  "IMG_8342_png": {src:"img/IMG_8342.jpg",cap:"점유자 심경 변화 (만화형)"},  "IMG_8352_png": {src:"img/IMG_8352.png",cap:"경매 임장, 꼭 가야 할까?"},
   "IMG_8564_png": {src:"img/IMG_8564.jpg"},
     "IMG_8597_png": {src:"img/IMG_8597.jpg"},
   "IMG_8598_png": {src:"img/IMG_8598.jpg"},
@@ -3572,7 +3737,7 @@ const STEP_ORDER = {
   s1: ["IMG_8365_png","IMG_8366_png","IMG_8564_png"],
   s2: ["IMG_8363_png","IMG_8377_png","IMG_8378_png","IMG_8379_png"],
   s3: ["IMG_8367_png","IMG_8368_png","IMG_8369_png","IMG_8370_png","IMG_8374_png","IMG_8375_png","IMG_8315_jpeg","IMG_8618_png","IMG_8622_png","IMG_8623_png","IMG_8624_png","IMG_8626_png"],
-  s4: ["IMG_8408_png","IMG_8409_png","IMG_8410_png","IMG_8411_png","IMG_8412_png","IMG_8413_png","IMG_8414_png","IMG_8415_png","IMG_8416_png","IMG_8417_png","IMG_8382_jpeg","IMG_8619_png","IMG_8620_png","IMG_8621_png","IMG_8625_png"],
+  s4: ["IMG_8408_png","IMG_8409_png","IMG_8410_png","IMG_8411_png","IMG_8412_png","IMG_8413_png","IMG_8414_png","IMG_8415_png","IMG_8416_png","IMG_8417_png","IMG_8382_jpeg","IMG_8619_png","IMG_8620_png","IMG_8621_png","IMG_8625_png","IMG_8718_png","IMG_8725_png"],
   s5: ["IMG_8361_png","IMG_8364_png","IMG_8372_png","IMG_8371_png","IMG_8373_png","IMG_8617_png","IMG_8633_png","IMG_8634_png","IMG_8635_png","IMG_8636_png","IMG_8637_png","IMG_8638_png","IMG_8639_png","IMG_8683_png","IMG_8684_png","IMG_8685_png","IMG_8686_png","IMG_8687_png","IMG_8688_png","IMG_8689_png","IMG_8690_png","IMG_8691_png","IMG_8692_png","IMG_8693_png","IMG_8694_png","IMG_8695_png","IMG_8696_png","IMG_8697_png","IMG_8698_png","INFO_overbid8_png"],
   s6: ["IMG_8383_png","IMG_8341_png","IMG_8342_png","IMG_8352_png"]
 };
